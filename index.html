@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" value="Кнопка" class="knopka">
+        <span class="slider round"></span>
+      </label>
+        <h2 class="elastic">эластичный текст</h2>
+    <h1>конспект</h1>
+   <h2>Введение</h2>
+   <p>БЭМ (Блок, Элемент, Модификатор) — компонентный подход к веб-разработке. В его основе лежит принцип разделения интерфейса на независимые блоки. Он позволяет легко и быстро разрабатывать интерфейсы любой сложности и повторно использовать существующий код, избегая «Copy-Paste»</p>
+   <h2>Содержание</h2>
+   <p>Блок
+    Элемент
+    Когда создавать блок, когда — элемент?
+    Модификатор
+    Микс
+    Файловая структура</p>
+    <h2>Блок</h2>
+    <p>Функционально независимый компонент страницы, который может быть повторно использован. В HTML блоки представлены атрибутом class.
+        Название блока характеризует смысл («что это?» — «меню»: menu, «кнопка»: button), а не состояние («какой, как выглядит?» — «красный»: red, «большой»: big).
+    </p>
+    <h2>Пример</h2>
+    <p>!-- Верно. Семантически осмысленный блок error -->
+        div class="error"></div>
+         
+        !-- Неверно. Описывается внешний вид -->
+        div class="red-text"></div>
+        Блок не должен влиять на свое окружение, т. е. блоку не следует задавать внешнюю геометрию (в виде отступов, границ, влияющих на размеры) и позиционирование.
+        В CSS по БЭМ также не рекомендуется использовать селекторы по тегам или id.
+        Таким образом обеспечивается независимость, при которой возможно повторное использование или перенос блоков с места на место.</p>
+        <h2>items</h2>
+        <p>align items-
+                выравнивание по высоте
+                justify content- по ширине
+        </p>
+        <h2>Элемент</h2>
+        <p>Элемент - Составная часть блока, которая не может использоваться в отрыве от него.</p>
+        <h2>Особенности:</h2>
+        <p>Особенности:
+            Название элемента характеризует смысл («что это?» — «пункт»: item, «текст»: text), а не состояние («какой, как выглядит?» — «красный»: red, «большой»: big).
+            Структура полного имени элемента соответствует схеме: имя-блока__имя-элемента. Имя элемента отделяется от имени блока двумя подчеркиваниями (__).
+            Пример: header__container
+            нельзя так header__container__block
+            можно header-container__block или 
+            div class="block">
+                div class="block__elem1">
+                    div class="block__elem2">
+                        div class="block__elem3"></div>
+                    /div>
+                /div>
+            /div>
+        /p>
+        <h2>Принадлежность</h2>
+        <p>Принадлежность
+            Элемент — всегда часть блока и не должен использоваться отдельно от него.
+            Правильно: 
+            form class="search-form">
+                <!-- Элемент input блока search-form -->
+                input class="search-form__input">
+            
+                <!-- Элемент button блока search-form -->
+                button class="search-form__button">Найти /button>
+            /form>
+            Неправильно:
+            <form class="search-form">
+            /form>
+            
+            <!-- Элемент input блока search-form -->
+            input class="search-form__input">
+            
+            <!-- Элемент button блока search-form -->
+            button class="search-form__button">Найти /button>
+            </p>
+           
+            <p>.elastic{
+                font-size: 75px;
+                font-size: calc(15px + 50 * (100vw / 1280));
+            } эластичный текст
+            </p>
+            <h2>Адаптивные изображения</h2>
+            <h2>Keyframes</h2>
+            <p>Анимация css создание анимации базируется на ключевых кадрах (Keyframes) которые позволяют автоматически воспроизводить и повторять эффекты на протяжение заданного времени, а также приостанавливать анимацию по определеному событию.</p>
+
+            <div class="wrapper">
+                <div class="content">
+                    <div class="content__circle"></div>
+                </div>
+            </div>
+            <p>Animation name - определяет список применяемых к элементу анимаций.</p>
+            <p>Animation-duration -  отвечает за продолжительность анимации.</p>
+            <p>Animation-timing-function - задает сценарий развитий анимации между кадрами.</p>
+            <p>Animation-iteration-count - отвечает за повтор проигрывание ключевых кадров.</p>
+            <p>Animation-direction - определяет направление и тип проигрывание ключевых кадров.</p>
+            <p>Animation-play-state - позволяет запусктаьиил останавливать анимацию по событию.</p>
+            <p>Animation-delay - отвечает за задержку перед началом проигрывания.</p>
+            <p>Animation-fill-mode - определяет какие значения анимированных css свойств применяется к обьекту после завершения анимации.</p>
+            <p>Чтобы кружок доходя до центра становился квдратом и опускался на 100px вниз</p>
+            <h2>2D и 3D трансформация</h2>
+            
+    <section>
+        <div class="container">
+            <div class="square"></div>
+        </div>
+  
+        <div class="container">
+            <div class="square1"></div>
+        </div>
+   
+        <div class="container">
+            <div class="square2"></div>
+        </div>
+
+       <div class="container">
+           <div class="square3"></div>
+       </div>
+
+      <div class="container">
+          <div class="square4"></div>
+      </div>
+      <p>3D</p>
+       <div class="container" id="persp">
+            <div class="square5"></div>
+        </div>
+  
+        <div class="container" id="persp">
+            <div class="square6"></div>
+        </div>
+   
+        <div class="container" id="persp">
+            <div class="square7"></div>
+        </div>
+
+       <div class="container" id="persp">
+           <div class="square8"></div>
+       </div>
+
+      <div class="container" id="persp">
+          <div class="square9"></div>
+      </div>
+  </section>
+    <p>jquery - это библиотека на языке javascript, она подключается к веб-странице. Это библиотека представляет селекторы в стиле css и методы которые позволяют собственно находить элементы и выполнять с ними какие либо действия.</p>
+    <ul>
+        <li>Txt</li>
+        <li>Txt</li>
+        <li>Txt</li>
+        <li>Txt</li>
+        <li>Txt</li>
+    </ul> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+     $("p").addClass("p");
+     $(".p").click(function () {
+            $('.p').toggleClass("p")
+     })
+        })
+        $(document).ready(function (){
+            $('ul').click(function () {
+                $("li:lt(3)").hide().fadeIn(1500);
+            })
+        })
+    </script>
+    <p>Текст</p>   
+    <script>
+        $(document).ready(function (){
+            let $p = $("p:first").text();
+            $("ul").append ($p);
+        })
+    </script>
+    <p>1. Добавить 3 переменных первый p, второй p и переменная 2. К p2 присвоить текст из p1</p>
+    <h1>Добавление элементов</h1>
+    <p>Процесс добавления новых элементов состоит из двух шагов. Создания новых элементов в объекте jquery </p>
+    <ul>
+        <li>text</li>
+        <li>text</li>
+        <li class="last">text</li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            let $new_li = $("<li class='new'>element</li>");
+            $(".last").after($new_li);
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".knopka").click(function (){
+                $("body").toggleClass("night")
+            })
+        })
+    </script>
+</body>
+</html>
