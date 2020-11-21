@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/adapt_header.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-container__logo">
+            <div class="logo__circle">
+                <div class="logo__img">
+                    <img src="logoimg.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="header-container__links">
+            <ul class="ul-link">
+                <li>
+                    link
+                </li>
+                <li>
+                    link
+                </li>
+                <li>
+                    link
+                </li>
+            </ul>
+        </div>
+        <div class="header-container__button">
+            <img class="search-logo" src="media/img/search-logo-hi.png" alt="">
+            <input class="search-field" type="text">
+        </div>
+        <div class="header__burger">
+            <span></span>
+        </div>
+    </div>
+    
+</header>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js">
+
+</script>
+<script>
+        $(document).ready(function () {
+  $('.header__burger').click(function () {
+    $('.header__burger, .header-container__links').toggleClass('active');
+  })
+})
+
+</script>
+</div>
+</body>
+</html>
